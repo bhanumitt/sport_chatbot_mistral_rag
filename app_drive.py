@@ -8,11 +8,7 @@ import gdown
 import subprocess
 
 subprocess.run(
-        [
-            "pip", "install", "llama-cpp-python", 
-            "--no-cache-dir", "--force-reinstall", "--verbose", 
-            "--extra-index-url=https://jllllll.github.io/llama-cpp-python-cuBLAS-wheels/metal/"
-        ],
+        ["pip", "install", "llama-cpp-python", "--no-cache-dir", "--force-reinstall", "--verbose"],
         check=True
     )
 
