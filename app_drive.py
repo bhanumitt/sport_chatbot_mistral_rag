@@ -6,12 +6,6 @@ import pickle
 import streamlit as st
 import gdown
 import subprocess
-
-subprocess.run(
-        ["pip", "install", "llama-cpp-python", "--no-cache-dir", "--force-reinstall", "--verbose"],
-        check=True
-    )
-
 from llama_cpp import Llama
 
 class SentenceTransformerRetriever:
