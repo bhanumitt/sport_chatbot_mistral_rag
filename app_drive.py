@@ -6,6 +6,17 @@ import pickle
 from llama_cpp import Llama
 import streamlit as st
 import gdown
+import subprocess
+
+subprocess.run(
+        [
+            "pip", "install", "llama-cpp-python", 
+            "--no-cache-dir", "--force-reinstall", "--verbose", 
+            "--extra-index-url=https://jllllll.github.io/llama-cpp-python-cuBLAS-wheels/metal/"
+        ],
+        check=True
+    )
+
 
 class SentenceTransformerRetriever:
     def __init__(self, model_name: str = "sentence-transformers/all-MiniLM-L6-v2", cache_dir: str = "embeddings_cache"):
