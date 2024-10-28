@@ -3,7 +3,6 @@ import torch
 import torch.nn.functional as F
 from sentence_transformers import SentenceTransformer
 import pickle
-from llama_cpp import Llama
 import streamlit as st
 import gdown
 import subprocess
@@ -17,6 +16,7 @@ subprocess.run(
         check=True
     )
 
+from llama_cpp import Llama
 
 class SentenceTransformerRetriever:
     def __init__(self, model_name: str = "sentence-transformers/all-MiniLM-L6-v2", cache_dir: str = "embeddings_cache"):
